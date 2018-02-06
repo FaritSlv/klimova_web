@@ -1,0 +1,30 @@
+.checkbox
+.checkbox__label
+	font-size: 16px
+	font-weight: 700
+	margin-bottom: 15px
+.checkbox__wrap
+	display: flex
+	justify-content: space-between
+.checkbox__item
+	display: block
+	&:hover,
+	&:focus
+		.checkbox__visual
+			background-color: $yellow
+.checkbox__visual
+	font-size: 14px
+	font-weight: 700
+	width: 100%
+	display: block
+	background-color: #f7f7f7
+	border-radius: 25px
+	padding: 10px
+	cursor: pointer
+	transition: 0.15s all
+	text-align: center
+.checkbox__input
+	position: absolute
+	left: -9999px
+.checkbox__input:checked + .checkbox__visual
+	background-color: $yellow

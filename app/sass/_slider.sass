@@ -1,0 +1,56 @@
+.slider-actions
+	display: flex
+	&.horizontal
+		align-items: flex-end
+		.slider-dots
+			display: flex
+			margin-left: 15px
+			.owl-dot
+				width: 1px
+				height: 70px
+				display: flex
+				align-items: flex-end
+				&.active
+					span
+						height: 70px
+						opacity: 1
+				&:hover
+					span
+						opacity: 1
+						cursor: pointer
+				span
+					height: 35px
+					width: 1px
+					background: $main
+					opacity: 0.3
+					display: block
+					transition: 0.15s all
+				+ .owl-dot
+					margin-left: 20px
+		.slider-prev,
+		.slider-next
+			width: 48px
+			height: 38px
+			background: url(../img/main/arrow_slider_hor.png) no-repeat center
+			cursor: pointer
+			transition: 0.35s all
+			&.disabled
+				opacity: 0.3
+				cursor: default
+		.slider-next
+			transform: rotate(-180deg)
+		.slider-info	
+			margin: 0 35px
+			display: flex
+			align-items: flex-end
+
+.slider-counter
+	display: flex
+	font-size: 20px
+	font-weight: 100
+	align-items: baseline
+	justify-content: flex-end
+	
+.slider-counter__current
+	font-size: 30px
+	font-weight: 700

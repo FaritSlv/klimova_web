@@ -1,0 +1,42 @@
+.input
+	font-size: 16px
+	font-family: $main-font
+	line-height: 1
+	border-top: 0
+	border-left: 0
+	border-right: 0
+	border-bottom: 2px solid currentColor
+	height: 40px
+	font-weight: 700
+	width: 100%
+	background-color: transparent
+	&:focus
+		outline: none
+		+ .input__placeholder
+				font-size: 12px
+				top: -5px
+				left: 0
+.input__label
+	display: block
+	position: relative
+	padding-top: 5px
+	padding-bottom: 20px
+	&.input_has-error
+		.input__error
+			position: absolute
+			left: 0
+			bottom: 5px
+			font-size: 12px
+			line-height: 1
+			color: $red
+			font-weight: 700
+		.input
+			border-bottom-color: $red
+.input__placeholder
+	font-size: 16px
+	font-weight: 700
+	position: absolute
+	transition: 0.15s all
+	left: 0
+	top: 19px
+	cursor: text

@@ -1,0 +1,99 @@
+.btn
+	border: none
+	background: none
+	outline: none
+	padding: 15px 25px
+	text-transform: uppercase
+	font-size: 12px
+	font-family: $second-font
+	transition: 0.15s all
+	&:hover,
+	&:focus
+		color: $main
+		text-decoration: none
+	&:active
+		text-decoration: none
+	&.btn_s
+		padding: 10px 25px
+	.fa_with-text
+		margin-left: 10px
+.btn_action
+	background-color: $yellow
+	color: $main
+	font-weight: 700
+	border-radius: 25px
+	&:hover,
+	&:focus
+		background-color: lighten($yellow, 10%)
+	&:active
+		background-color: darken($yellow, 5%)
+	.fa-arrow-right
+		margin-left: 10px
+.btn_search
+	background-color: $clear
+	border-radius: 50%
+	color: #5f88cc
+	width: 44px
+	height: 44px
+	padding: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 18px
+	&:hover,
+	&:focus
+		color: $clear
+		background-color: lighten(#5f88cc, 10%)
+	&:active
+		color: $clear
+		background-color: darken(#5f88cc, 5%)
+.btn_action-blue
+	background-color: $blue
+	color: $clear
+	font-weight: 700
+	border-radius: 25px
+	&:hover,
+	&:focus
+		color: $clear
+		background-color: lighten($blue, 10%)
+	&:active
+		background-color: darken($blue, 5%)
+	.fa-arrow-right
+		margin-left: 10px
+.btn_action-blue2
+	background-color: #035b9f
+	color: $clear
+	font-weight: 700
+	border-radius: 25px
+	&:hover,
+	&:focus
+		background-color: lighten(#035b9f, 4%)
+		color: $clear
+	&:active
+		background-color: darken(#035b9f, 5%)
+	.fa-arrow-right
+		margin-left: 10px
+.btn_pseudo
+	color: $clear
+	&:hover,
+	&:focus
+		color: $yellow
+		text-decoration: none
+		outline: none
+	&:active
+		color: darken($yellow, 5%)
+.btn_pseudo-inverted
+	color: $main
+.btn_full-length
+	display: flex
+	width: 100%
+	align-items: center
+	justify-content: center
+	padding: 20px
+	background-color: #f7f5f4
+	color: $main
+	&:hover,
+	&:focus
+		background-color: darken(#f7f5f4, 5%)
+	&:active
+		background-color: darken(#f7f5f4, 8%)

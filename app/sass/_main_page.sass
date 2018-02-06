@@ -1,0 +1,230 @@
+.main-page
+	.block_inverted
+		color: $clear
+
+	.block1
+		height: calc(100vh + 200px)
+		position: relative
+		.header
+			position: relative
+			z-index: 2
+		.block1-header-emulation
+			padding-top: 98px
+		.container.container_main
+			position: relative
+			z-index: 2
+			height: 100vh
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			&::before,
+			&::after
+				display: none
+			.block1-content
+				margin-top: -(98px-50px)
+			.slider-actions
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 0
+				flex-direction: column
+				align-items: flex-end
+			.slider-info
+				margin: 100px 0
+			.slider-prev,
+			.slider-next
+				width: 39px
+				height: 48px
+				background-image: url("../img/main/arrow_slider.png")
+				background-position: center
+				cursor: pointer
+				transition: 0.35s all
+				&.disabled
+					opacity: 0.3
+					cursor: default
+			.slider-next
+				transform: rotate(-180deg)
+			.slider-counter
+				margin-bottom: 10px
+				
+			.slider-dots
+				.owl-dot
+					width: 90px
+					display: flex
+					justify-content: flex-end
+					&.active
+						span
+							width: 90px
+							opacity: 1
+							background-color: $yellow
+					&:hover
+						span
+							opacity: 1
+							background-color: $yellow
+							cursor: pointer
+					span
+						width: 45px
+						height: 1px
+						background: $clear
+						opacity: 0.7
+						display: block
+						transition: 0.15s all
+					+ .owl-dot
+						margin-top: 20px
+
+	.block1-footer
+		display: flex
+		justify-content: space-between
+		padding-left: 84px
+		padding-bottom: 20px
+	.block1-heading
+		margin-bottom: 60px
+		span
+			display: block
+			&.block1-heading__l
+				font-size: 90px
+			&.block1-heading__m
+				font-size: 50px
+				padding-left: 118px
+			&.block1-heading__s
+				font-size: 30px
+				font-weight: 400
+				padding-left: 118px
+	.block1-actions
+		padding-left: 118px
+	.block1-list
+		display: flex
+	.block1-list__item
+		display: flex
+		align-items: center
+		+ .block1-list__item
+			margin-left: 90px
+	.block1-list__img
+		flex-shrink: 0
+		margin-right: 10px
+	.block1-list__text
+		font-size: 22px
+		font-weight: 100
+
+	.block2
+		background: url(../img/main/back2.jpg) no-repeat center top
+		min-height: 960px
+		.container
+			position: relative
+			height: 100%
+			z-index: 3
+			display: flex
+			justify-content: flex-end
+			padding-bottom: 160px
+		.girls
+			position: absolute
+			width: 540px
+			height: 1325px
+			left: 130px
+			top: -160px
+			background: url(../img/main/girls.png) no-repeat center
+
+	.block3
+		.container
+			padding-bottom: 75px			
+		.slider-actions
+			margin-top: 75px
+			margin-bottom: 20px
+			width: 890px
+			justify-content: flex-end
+		.block3-content-wrap
+			display: flex
+			align-items: stretch
+		.slider2
+			flex-shrink: 0
+			overflow: hidden	
+		.block3-right
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding:
+				left: 100px
+				right: 80px
+		.block3-text
+			h3
+				font-size: 50px
+				font-weight: 700
+				text-transform: uppercase
+			p
+				margin-top: 50px
+				font-size: 22px
+				line-height: 1.6
+			.btn_pseudo
+				padding-left: 0
+		.license
+			margin-top: 80px
+
+	.block4
+		.container
+			padding-bottom: 75px
+		.h3
+			margin-bottom: 60px
+
+	.slider-wrap
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		overflow: hidden
+	.slider-main
+		width: 100%
+		height: 100%
+	.slider-main__item
+		background-size: cover
+		height: calc(100vh + 200px)
+		.container
+			position: relative
+	.slider2
+		width: 890px
+		height: 880px
+		position: relative
+
+	.block5
+		.container
+			padding-bottom: 75px
+		.h2
+			margin-bottom: 55px
+		.slider-actions
+			justify-content: flex-end
+			margin-bottom: 40px
+			margin-top: -40px
+		.tabs
+			margin-left: 200px
+
+	.block7
+		.container
+			padding-top: 75px
+			padding-bottom: 75px
+		.slider-actions
+			justify-content: flex-end
+			margin-bottom: 40px
+			margin-top: -40px
+		.btn_full-length
+			position: relative
+			z-index: 2
+	.block8
+		.container
+			padding-bottom: 75px
+		.procedure__tab
+			margin-top: 40px
+
+	.block9
+		.container
+		.banner
+			padding-top: 50px
+			padding-bottom: 50px
+
+	.block10
+		.container
+			padding-top: 75px
+			padding-bottom: 75px
+		.slider-actions
+			justify-content: flex-end
+			margin-bottom: 40px
+			margin-top: -40px

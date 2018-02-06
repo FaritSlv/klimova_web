@@ -1,0 +1,30 @@
+.breadcrumbs
+	display: flex
+	font-family: $second-font
+	margin-bottom: 30px
+.breadcrumbs__item
+	font-size: 12px
+	color: $main
+	cursor: pointer
+	&:hover,
+	&:focus
+		color: $main
+	+ .breadcrumbs__item
+			margin-left: 15px
+			position: relative
+			&::before
+				content: ''
+				width: 3px
+				height: 1px
+				background-color: $main
+				position: absolute
+				left: -9px
+				top: 50%
+				transform: translateY(-50%)
+.breadcrumbs__item_current
+	color: #9b9b9b
+	cursor: default
+	&:hover,
+	&:focus
+		color: #9b9b9b
+		text-decoration: none

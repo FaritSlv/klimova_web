@@ -1,0 +1,88 @@
+.reviews-page
+	.breadcrumbs
+		margin-left: 200px
+	.tabs
+		margin-left: 200px
+		margin-bottom: 60px
+	.h2
+		margin-bottom: 40px
+	.block1
+		.container
+			padding-top: 50px
+			padding-bottom: 50px
+	.block2
+		.container
+			padding-top: 50px
+			padding-bottom: 50px
+		.btn
+			margin-top: 20px
+	.block3
+		.container
+			padding-bottom: 50px
+
+.review-page-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: -40px
+.review-page-list__item
+	padding: 0 30px 30px
+	margin-top: 40px
+	position: relative
+	&::before
+		content: ''
+		height: calc(100% - 30px)
+		width: 100%
+		background-color: #f6f5f5
+		position: absolute
+		left: 0
+		bottom: 0
+	&.review-page-list__item_l
+		width: 100%
+		.review-page-list__img-content
+			width: 50%
+		.review-page-list__text
+			font-size: 22px
+			.review-page-list__author
+				font-size: 16px
+	&.review-page-list__item_m
+		width: 49%
+		.review-page-list__img-content
+			width: 380px
+		.review-page-list__text
+			font-size: 16px
+			.review-page-list__author
+				font-size: 14px
+			
+.review-page-list__img-content
+	margin-right: 60px
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+.review-page-list__item-wrap
+	position: relative
+	z-index: 2
+	display: flex
+	align-items: center
+.review-page-list__img-wrap
+	width: 100%
+	overflow: hidden
+.review-page-list__author_name
+		font-weight: 700
+.review-page-list__author_spec
+	font-weight: 300
+
+.review-page-list__text
+	padding-top: 30px
+	font-weight: 300
+	padding-left: 30px
+	position: relative
+	&::before
+		content: '”'
+		position: absolute
+		left: -18px
+		top: 18px
+		font-size: 70px
+	p
+		margin-bottom: 0
+		margin-top: 0
+		+ p
+			margin-top: 30px

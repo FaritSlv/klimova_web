@@ -1,0 +1,26 @@
+h1,h2,h3,h4,h5,h6
+	margin: 0
+	padding: 0
+
+.h2
+	font-size: 90px
+	font-weight: 100
+	text-transform: uppercase
+	position: relative
+.h3
+	font-size: 50px
+	font-weight: 100
+	text-transform: uppercase
+	position: relative
+
+.lined
+	padding-left: 200px
+	&::before
+		content: ''
+		position: absolute
+		height: 2px
+		width: 160px
+		background-color: #ebebeb
+		left: 0
+		top: 50%
+		margin-top: -1px

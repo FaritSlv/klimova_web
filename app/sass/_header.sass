@@ -1,0 +1,70 @@
+/*HEADER*/
+.header
+	display: flex
+	justify-content: space-between
+	font-family: $second-font
+	color: $main
+	box-shadow: 0px 15px 29px -11px rgba(0,0,0,0.2)
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+	a
+		color: $main
+.header_inverted
+	color: $clear
+	box-shadow: none
+	.navigation-list__link
+		&:hover,
+		&:focus
+			color: $yellow 
+	a
+		color: $clear
+.header_with-full-screen
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	z-index: 3
+.header-logo
+	align-self: center
+.header-actions
+	display: flex
+	margin-top: 10px
+	.btn
+		display: block
+.header-actions__main
+	.btn.btn_pseudo
+		margin: 0 auto
+.header-actions__main + .header-actions__secondary
+	margin-left: 20px
+
+.header-info
+	text-align: right
+	margin-top: 10px
+.header-info__phone
+	font-size: 22px
+.header-info__social-links
+	font-size: 12px
+	font-weight: 300
+	margin: 5px 0
+.header-info__location
+	font-size: 14px
+
+.navigation
+	font-size: 14px
+.navigation-list
+	display: flex
+.navigation-list__item
+	+ .navigation-list__item
+		margin-left: 20px
+.navigation-list__link
+	text-transform: uppercase
+	color: currentColor
+	transition: color 0.15s
+	&:hover,
+	&:focus
+		color: $blue-header
+		text-decoration: none
+		outline: none
+/*HEADER END*/

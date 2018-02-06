@@ -1,0 +1,771 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "popup"
+@import "header"
+@import "main_page"
+@import "review_page"
+@import "actions_page"
+@import "procedures_page"
+@import "btn"
+@import "headers"
+@import "slider"
+@import "formappointment"
+@import "input"
+@import "checkbox"
+@import "footer"
+@import "breadcrumbs"
+@import "biginfo_banner"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+svg
+	fill: currentColor
+
+.clear
+	color: $clear
+
+.red
+	color: $red
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.2
+	font-family: $main-font
+	color: $main
+	opacity: 1
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+
+.fa
+	font-family: "FA"
+
+.mg5
+	margin-top: 5px
+.mg10
+	margin-top: 10px
+.mg15
+	margin-top: 15px
+.mg20
+	margin-top: 20px
+.mg25
+	margin-top: 25px
+.mg30
+	margin-top: 30px
+.mg40
+	margin-top: 40px
+.mg50
+	margin-top: 50px
+
+.up
+	text-transform: uppercase
+.old
+	text-decoration: line-through
+.bold
+	font-weight: bold
+.semi
+	font-weight: 500
+.light
+	font-weight: 300
+.thin
+	font-weight: 100
+
+.works-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: -76px
+.works-list__item
+	margin-top: 76px
+	position: relative
+	&.work-list__item_direction
+		width: 430px
+		padding: 20px 30px
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 80%
+			bottom: 0
+			left: 0
+			background-color: #fafafa
+			z-index: 1
+	&.works-list__item_big
+		width: 860px
+	&.work-list__item_form
+		width: 430px
+		background-color: #fafafa
+		padding: 40px 30px
+.works-list__top
+	position: relative
+	z-index: 2
+	margin-bottom: 24px
+	display: flex
+	justify-content: space-between
+	.vertical-header
+		font-size: 20px
+.works-list__img
+	height: 408px
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+.works-list__bottom
+	position: relative
+	z-index: 2
+	font-weight: 300
+	font-size: 20px
+
+.vertical-header__wrap
+	transform: rotate(-180deg)
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	&::after
+		content: ''
+		width: 3px
+		background-color: $main
+		flex-grow: 1
+		margin-left: 4px
+		transition: 0.25s all
+.vertical-header
+	transition: 0.25s all
+	writing-mode: vertical-lr
+	font-weight: bold
+	text-transform: uppercase
+	flex-shrink: 0
+	margin-bottom: 25px
+	
+.banner
+	padding: 0 100px
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	color: $clear
+	background-color: $blue-banner
+	background-image: url('../img/main/back1.png')
+	background-repeat: no-repeat
+	background-position: right 30px bottom
+.banner__header
+	font-size: 50px
+	font-weight: 700
+	margin-bottom: 30px
+	position: relative
+	&::before
+		content: '“'
+		position: absolute
+		left: -40px
+		top: 0
+.banner__text
+	font-size: 30px
+	margin-bottom: 30px
+	font-weight: 300
+	&.banner__text_size-s
+		font-size: 24px
+	p
+		margin: 0
+.banner__button
+	.btn
+		display: inline-block
+
+.question-form
+	display: flex
+	flex-direction: column
+	justify-content: center
+.question-form__wrap
+	display: flex
+	height: 100%
+	.vertical-header
+		font-size: 20px
+.question-form__descr
+	font-size: 26px
+	font-weight: 700
+	margin-bottom: 40px
+.question-form__item + .question-form__item
+	margin-top: 20px
+.question-form__item
+	&:last-child
+		margin-top: 35px
+.question-form__label
+	display: flex
+	width: 100%
+	align-items: center
+.question-form__label-text
+	font-size: 18px
+	font-weight: 700
+/*RADIO BUTTON*/
+.question-form__radio
+	position: absolute
+	left: -9999px
+.question-form__radio-icon
+	margin-right: 10px
+.question-form__radio + .question-form__radio-icon
+	width: 15px
+	height: 15px
+	border-width: 2px
+	border-style: solid
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 2px
+	&::before
+		content: ''
+		width: 5px
+		height: 5px
+		background-color: #979797
+		border-radius: 50%
+		opacity: 0
+		transform: scale(0)
+		transition: 0.15s all
+.question-form__radio:not(:checked) + .question-form__radio-icon
+	border-color: #979797
+	transition: 0.15s border-color
+	&::before
+		background-color: #979797
+.question-form__radio:checked + .question-form__radio-icon
+	border-color: $main
+	&::before
+		opacity: 1
+		transform: scale(1)
+		background-color: $main
+.question-form__label
+	cursor: pointer
+	&:hover
+		.question-form__radio:not(:checked) + .question-form__radio-icon,
+		.question-form__radio:checked + .question-form__radio-icon
+			border-color: $main
+			&::before
+				opacity: 1
+				transform: scale(1)
+				background-color: $main
+
+/*RADIO BUTTON END*/
+
+
+.license
+.license-header
+	font-weight: 100
+	font-size: 30px
+	text-transform: uppercase
+	margin-bottom: 20px
+.license-img
+	margin-bottom: 20px
+.license-small-text
+	font-size: 14px
+	color: #868787
+
+.procedure
+	background: $clear
+	width: 810px
+	margin-top: -160px
+.procedure__heading
+	padding: 74px 105px
+.procedure__header
+	font-size: 62px
+	font-weight: 300
+	margin-bottom: 20px
+	text-transform: uppercase
+.procedure__tab
+	display: flex
+	&.horizontal
+		.procedure__tab-item
+			flex-direction: row
+		.procedure__tab-icon
+			order: -1
+			margin-right: 15px
+.procedure__tab-item
+	display: flex
+	flex-direction: column
+	align-items: center
+	&:hover,
+	&.active
+		color: $blue
+		cursor: pointer
+.procedure__tab-item + .procedure__tab-item
+	margin-left: 90px
+.procedure__tab-text
+	text-transform: uppercase
+	font-size: 20px
+	font-weight: 300
+	margin-bottom: 5px
+.procedure__tab-icon
+	font-size: 24px
+
+.procedure-list
+.procedure-list__item
+	padding: 30px 105px
+	position: relative
+	cursor: pointer
+	&:nth-child(2n+1)
+		background-color: #efefef
+	&:nth-child(2n)
+		background-color: #f4f4f4
+	&.procedure-list__item_active
+		background-color: #e8ebf1
+		.procedure-list__name,
+		.procedure-list__price
+			color: $blue
+		.procedure-list__drop-icon_bottom
+			display: none
+		.procedure-list-hidden
+			display: flex
+	&:hover
+		.procedure-list__drop-icon_bottom
+			opacity: 1
+.procedure-list__info
+	position: absolute
+	top: 35px
+	left: 70px
+	width: 16px
+	height: 16px
+	font-size: 10px
+	color: $blue
+	display: flex
+	border-radius: 50%
+	border: 1px solid $blue
+	align-items: center
+	justify-content: center
+.procedure-list__name
+	font-size: 30px
+.procedure-list__price
+	font-size: 16px
+.procedure-list__extended-wrap
+	display: none
+.procedure-list__extended
+	margin-top: 20px
+	display: flex
+	align-items: flex-start
+.procedure-extended-list
+	margin-right: 60px
+.procedure-list__btn
+	flex-shrink: 0
+.procedure-list__drop-icon,
+.procedure-list__drop-icon_bottom
+	position: absolute
+	top: 30px
+	right: 40px
+	width: 45px
+	height: 45px
+	font-size: 16px
+	color: $blue
+	display: flex
+	border-radius: 50%
+	border: 3px solid $blue
+	align-items: center
+	justify-content: center
+.procedure-list__drop-icon_bottom
+	opacity: 0
+	transition: 0.15s opacity
+.procedure-list-hidden
+	display: none
+.procedure-bottom-text
+	margin-top: 25px
+	width: 800px
+	text-align: center
+	font-weight: 300
+
+.doc-info
+	display: flex
+	align-items: center
+	padding-left: 18px
+	+ .block1-actions
+		margin-top: 20px
+.doc-info__content
+	margin-left: 30px
+.doc-info__name
+	font-size: 24px
+	margin-bottom: 5px
+.doc-info__prof
+	font-size: 14px
+
+.social
+	display: flex
+.social__item
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	color: #8b7a73
+	background-color: $clear
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: 0.15s all
+	&:hover,
+	&:focus
+		text-decoration: none
+		background-color: $yellow
+		color: $clear
+	+ .social__item
+		margin-left: 15px
+
+.doc-list
+	display: flex
+	justify-content: space-between
+.doc-list__item
+	width: 430px
+	background-color: #fafafa
+	padding: 40px 30px
+	color: $main
+	&:hover,
+	&:focus
+		color: $main
+		text-decoration: none
+		outline: none
+.doc-list__wrap
+.doc-list__img
+	height: 448px
+	margin-bottom: 40px
+	display: block
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+.doc-list__name
+	font-size: 20px
+	font-weight: 700
+.doc-list__spec
+	font-size: 18px
+	font-weight: 300
+	margin-top: 5px
+
+.tabs
+	display: flex
+.tabs__item
+	color: $main
+	font-size: 18px
+	padding-bottom: 4px
+	border-bottom: 1px solid transparent
+	transition: border-color 0.15s
+	+ .tabs__item
+		margin-left: 40px
+	&:focus,
+	&:hover,
+	&.tabs__item_active
+		color: $blue
+		text-decoration: none
+		outline: none
+		border-color: $blue
+	&:active
+		color: darken($blue, 5%)
+		border-color: darken($blue, 5%)
+
+.action-card
+	width: 600px
+	height: 340px
+	padding: 40px
+	background-color: $clear
+	color: $clear
+	&:hover,
+	&:focus
+		color: $clear
+		text-decoration: none
+	&.action-card_velvet
+		.action-card__wrap
+			background-color: #927ac9
+	&.action-card_blue
+		.action-card__wrap
+			background-color: #6babc8
+.action-card__wrap
+	background-image: url('../img/main/back1.png')
+	background-repeat: no-repeat
+	background-position: center bottom
+	height: 100%
+	padding: 20px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: relative
+	.btn
+		position: absolute
+		left: 50%
+		bottom: -22px
+		transform: translateX(-50%)
+.action-card__name
+	font-size: 36px
+	font-weight: 300
+	text-transform: uppercase
+	margin-bottom: 20px
+.action-card__price
+	.svg-inline--fa
+		height: 0.7em
+		vertical-align: 0em
+.action-card__price_old
+	font-size: 30px
+	text-decoration: line-through
+.action-card__price_new
+	font-size: 60px
+
+.action-card-list
+	display: flex
+	justify-content: space-between
+	.action-card
+		padding: 0
+		width: 32%
+	.action-card__name
+		text-transform: none
+		font-size: 30px
+		text-align: center
+		padding: 0 30px
+	.action-card__descr
+		font-size: 20px
+		margin-bottom: 10px
+
+.actions-list
+	display: flex
+
+.slider_sale
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+
+.actions-list__item
+	width: 50%
+	height: 684px
+	position: relative
+	.action-card
+		position: absolute
+		right: 0
+		bottom: 0
+		&::before
+			content: ''
+			position: absolute
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 30px 30px 30px 0
+			border-color: transparent $clear transparent transparent
+			left: -30px
+			top: 50%
+			transform: translateY(-50%)
+
+.procedure-tile-list
+	display: flex
+	margin-top: -60px
+	flex-wrap: wrap
+	justify-content: space-between
+	.vertical-header
+		font-size: 24px
+.procedure-tile-list__item
+	width: 580px
+	margin-top: 60px
+	padding: 30px
+	position: relative
+.procedure-tile-list__item_form
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+	padding: 50px
+.procedure-tile-list__item_nomod
+	overflow: hidden
+	transition: 0.55s all
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 90%
+		left: 0
+		bottom: 0
+		background-color: #fafafa
+		transition: 0.25s all
+	&:hover
+		box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+		.procedure-tile-list__img-wrap
+			transform: scale(1.5)
+			transform-origin: center
+			left: 0
+			right: 0
+			&::before
+				opacity: 1
+		.procedure-tile-list__footer
+			flex-wrap: wrap
+			opacity: 0
+		.procedure-tile-list__footer-emulation
+			transform: translateY(0px)
+			opacity: 1
+		.vertical-header
+			color: $clear
+		.vertical-header__wrap
+			&::after
+				background-color: $clear
+.procedure-tile-list__content
+	display: flex
+	justify-content: space-between
+	margin-bottom: 25px
+.procedure-tile-list__img-emulation
+	width: 472px
+	height: 544px
+	flex-shrink: 0
+.procedure-tile-list__img-wrap
+	transition: 0.25s all
+	transform: scale(1)
+	position: absolute
+	top: 30px
+	left: 30px
+	width: 472px
+ 	will-change: transform
+	&::before
+		opacity: 0
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba(0,0,0,0.4)
+		transition: 0.45s all
+.procedure-tile-list__img
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1)
+	width: 100%
+.procedure-tile-list__footer
+	position: relative
+	z-index: 2
+	display: flex
+	justify-content: space-between
+	align-items: baseline
+	width: 472px
+	opacity: 1
+	transform: translateY(0)
+	transition: 0.15s all
+.procedure-tile-list__price
+	font-size: 24px
+	font-weight: 700
+	text-transform: uppercase
+	.svg-inline--fa
+		height: 0.8em
+		vertical-align: -0.07em
+.procedure-tile-list__actions
+	.btn.btn_pseudo
+		padding: 0
+	.btn + .btn
+		margin-left: 20px
+.procedure-tile-list__footer-emulation
+	position: absolute
+	z-index: 4
+	left: 30px
+	bottom: 50px
+	transform: translateY(50px)
+	opacity: 0
+	transition: 0.3s all
+.procedure-tile-list__price_emulation
+	color: $clear
+	font-size: 30px
+	margin-bottom: 40px
+.procedure-tile-list__price_count
+	font-size: 60px
+	margin-left: 10px
+	.svg-inline--fa
+		height: 0.8em
+		vertical-align: -0.07em
+
+.article__link
+	display: flex
+	&:hover,
+	&:focus
+		text-decoration: none
+		outline: none
+		img
+			transform: scale(1.05)
+.article__img
+	flex-shrink: 0
+	overflow: hidden
+	img
+		transition: 0.35s all
+		height: 100%
+		transform: scale(1)
+
+.review-list
+	display: flex
+	color: $clear
+	.vertical-header
+		font-size: 24px
+	.vertical-header__wrap
+		&::after
+			background-color: $clear
+.review-list__item
+	width: 33.3%
+.review-list__wrap
+	display: flex
+	justify-content: center
+.review-list__photo
+	position: relative
+.review-list__content
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	justify-content: space-between
+	display: flex
+	padding: 30px
+.review-list__text
+	display: flex
+	align-items: center
+	font-size: 30px
+	font-weight: 100
+	margin-right: 20px
+.review-list__text-container
+	padding-left: 35px
+	position: relative
+	&::before
+		content: '«'
+		position: absolute
+		left: 0px
+		top: -22px
+		font-size: 60px
+
+.pre-footer
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.social__item
+		color: #577fc1
+		&:hover,
+		&:focus
+			text-decoration: none
+			background-color: $yellow
+			color: $clear
+.pre-footer__form
+	display: flex
+	align-items: center
+.pre-footer__form-inner + .pre-footer__form-inner
+	margin-left: 25px
+.pre-footer__header
+	font-size: 36px
+	font-weight: 300
+.pre-footer__social
+	display: flex
+	align-items: center
+.pre-footer__social-header
+	font-size: 16px
+	font-weight: 700
+	margin-right: 20px
+
+.overflow
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	.header
+		flex-shrink: 0
+	.content
+		flex-grow: 1
+	.footer-block
+		flex-shrink: 0
+@import "media" // Всегда в конце
